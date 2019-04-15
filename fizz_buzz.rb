@@ -2,16 +2,20 @@ require 'rspec'
 
 class FizzBuzz
   def output(number)
-    if number % 3 == 0 && number % 5 == 0
-      return "fizzbuzz"
-    end
-    if number % 3 == 0
-      return "fizz"
-    end
-    if number % 5 == 0
-      return "buzz"
-    end
+    final_output = ""
+    return "fizzbuzz" if number % 3 == 0 && number % 5 == 0
+    return "fizz" if number % 3 == 0
+    return "buzz" if number % 5 == 0
     return number
+    # if number % 3 == 0 && number % 5 == 0
+    #   final_output = "fizzbuzz"
+    # elsif number % 3 == 0
+    #   final_output = "fizz"
+    # elsif number % 5 == 0
+    #   final_output = "buzz"
+    # else
+    #   final_output = number
+    # end
   end
 end
 
