@@ -1,0 +1,11 @@
+require 'rspec'
+
+RSpec.describe ChangeMachine do
+  describe '#change' do
+    it 'should return [1] if given 1' do
+      change_machine = ChangeMachine.new
+      result = change_machine.change(1)
+      expect(result).to eq([1])
+    end
+  end
+end
