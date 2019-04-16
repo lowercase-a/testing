@@ -3,21 +3,12 @@ require 'rspec'
 class ChangeMachine
   def change(cents)
     purse = []
-    while cents >= 25
-      purse << 25
-      cents -= 25
-    end
-    while cents >= 10
-      purse << 10
-      cents -= 10
-    end
-    while cents >= 5
-      purse << 5
-      cents -= 5
-    end
-    while cents > 0
-      purse << 1
-      cents -= 1
+    coins = [25,10,5,1]
+    coins.each do |coin|
+      while cents >= coin
+        purse << coin
+        cents -= coin
+      end
     end
     return purse
   end
